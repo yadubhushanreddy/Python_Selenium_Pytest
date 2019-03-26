@@ -70,15 +70,15 @@ class Test_sample:
     @pytest.mark.smoke
     @pytest.mark.progression
     def test_links(self):
-        self.reuse.navigate_to_url("http://newtours.demoaut.com/")
-        assert self.reuse.get_title()=="Welcome: Mercury Tours"
-        assert self.reuse.element_presence("//a[text()='Home']", "Home Link")==True
-        assert self.reuse.element_presence("//a[text()='Flights']", "Flights Link")==True
-        assert self.reuse.element_presence("//a[text()='Hotels']", "Hotels Link")==True
-        assert self.reuse.element_presence("//a[text()='Car Rentals']", "Car Rentals Link")==True
-        assert self.reuse.element_presence("//a[text()='Cruises']", "Cruises Link")==True
-        assert self.reuse.element_presence("//a[text()='Destinations']", "Destinations Link")==True
-        assert self.reuse.element_presence("//a[text()='Vacations']", "Vacations Link")==True
+        self.reuse.navigate_to_url(self.driver, "http://newtours.demoaut.com/")
+        assert self.reuse.get_title(self.driver)=="Welcome: Mercury Tours"
+        assert self.reuse.element_presence(self.driver, "//a[text()='Home']", "Home Link")==True
+        assert self.reuse.element_presence(self.driver, "//a[text()='Flights']", "Flights Link")==True
+        assert self.reuse.element_presence(self.driver, "//a[text()='Hotels']", "Hotels Link")==True
+        assert self.reuse.element_presence(self.driver, "//a[text()='Car Rentals']", "Car Rentals Link")==True
+        assert self.reuse.element_presence(self.driver, "//a[text()='Cruises']", "Cruises Link")==True
+        assert self.reuse.element_presence(self.driver, "//a[text()='Destinations']", "Destinations Link")==True
+        assert self.reuse.element_presence(self.driver, "//a[text()='Vacations']", "Vacations Link")==True
     
 
 
