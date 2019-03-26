@@ -20,7 +20,7 @@ class Test_sample:
 #     print("In Fixture after Yield")
     @pytest.mark.smoke
     @pytest.mark.regression
-    @pytest.mark.repeat(4)
+    @pytest.mark.repeat(1)
     def test_website(self):
         self.reuse.navigate_to_url(self.driver, "http://newtours.demoaut.com/")
         assert self.reuse.get_title(self.driver)=="Welcome: Mercury Tours"
