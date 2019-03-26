@@ -67,18 +67,18 @@ class Test_sample:
 #     reuse.click_element("//input[@name='register']", "Submit button")
 #     assert "Thank you for" in reuse.get_text("//*[contains(text(),'Thank you for ')]")
 # 
-# @pytest.mark.smoke
-# @pytest.mark.progression
-# def test_links():
-#     reuse.navigate_to_url("http://newtours.demoaut.com/")
-#     assert reuse.get_title()=="Welcome: Mercury Tours"
-#     assert reuse.element_presence("//a[text()='Home']", "Home Link")==True
-#     assert reuse.element_presence("//a[text()='Flights']", "Flights Link")==True
-#     assert reuse.element_presence("//a[text()='Hotels']", "Hotels Link")==True
-#     assert reuse.element_presence("//a[text()='Car Rentals']", "Car Rentals Link")==True
-#     assert reuse.element_presence("//a[text()='Cruises']", "Cruises Link")==True
-#     assert reuse.element_presence("//a[text()='Destinations']", "Destinations Link")==True
-#     assert reuse.element_presence("//a[text()='Vacations']", "Vacations Link")==True
+@pytest.mark.smoke
+@pytest.mark.progression
+def test_links(self):
+    self.reuse.navigate_to_url("http://newtours.demoaut.com/")
+    assert self.reuse.get_title()=="Welcome: Mercury Tours"
+    assert self.reuse.element_presence("//a[text()='Home']", "Home Link")==True
+    assert self.reuse.element_presence("//a[text()='Flights']", "Flights Link")==True
+    assert self.reuse.element_presence("//a[text()='Hotels']", "Hotels Link")==True
+    assert self.reuse.element_presence("//a[text()='Car Rentals']", "Car Rentals Link")==True
+    assert self.reuse.element_presence("//a[text()='Cruises']", "Cruises Link")==True
+    assert self.reuse.element_presence("//a[text()='Destinations']", "Destinations Link")==True
+    assert self.reuse.element_presence("//a[text()='Vacations']", "Vacations Link")==True
     
 
 
