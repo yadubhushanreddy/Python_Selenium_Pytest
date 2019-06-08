@@ -8,6 +8,7 @@ from selenium.webdriver.support.wait import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.common.by import By
 import pytest
+from selenium.webdriver.common.desired_capabilities import DesiredCapabilities
 
 class Reusables:
     
@@ -19,7 +20,8 @@ class Reusables:
     def open_browser(self, browser_name):
         try:
             if browser_name == 'Chrome':
-                driver = webdriver.Chrome(executable_path = '/Users/bhushana/Downloads/chromedriver')
+                #driver = webdriver.Chrome(executable_path = '/Users/bhushana/Downloads/chromedriver')
+                driver = webdriver.Remote(command_executor='http://192.168.1.4:4444/wd/hub', desired_capabilities=DesiredCapabilities.FIREFOX)
                 driver.maximize_window()
                 print("Chrome browser opened")
                 return driver
