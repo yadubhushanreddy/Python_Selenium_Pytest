@@ -21,7 +21,7 @@ class Reusables:
         try:
             if browser_name == 'Chrome':
                 #driver = webdriver.Chrome(executable_path = '/Users/bhushana/Downloads/chromedriver')
-                driver = webdriver.Remote(command_executor='http://192.168.1.4:4444/wd/hub', desired_capabilities=DesiredCapabilities.FIREFOX)
+                driver = webdriver.Remote(command_executor='http://192.168.1.4:4444/wd/hub', desired_capabilities=DesiredCapabilities.CHROME)
                 driver.maximize_window()
                 print("Chrome browser opened")
                 return driver
